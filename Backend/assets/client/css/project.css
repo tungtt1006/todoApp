@@ -1,0 +1,10 @@
+.input_project_name 
+{
+	border: none;
+	border-bottom: 1px solid gray;
+	border-radius: 0px;
+}
+.input_project_name:focus
+{
+	box-shadow: none;
+}

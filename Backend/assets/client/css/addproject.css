@@ -1,0 +1,26 @@
+@font-face 
+{
+    font-family: Coves-Bold;
+    src: url('../fonts/Coves-Bold.otf');
+}
+@font-face 
+{
+    font-family: Coves-Light;
+    src: url('../fonts/Coves-Light.otf');
+}
+@font-face 
+{
+    font-family: Azonix;
+    src: url('../fonts/Azonix.otf');
+}
+.add_task 
+{
+    color: black;
+    font-family: Coves-Bold;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.add_task i {
+    font-size: 20px;
+}

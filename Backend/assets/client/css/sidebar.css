@@ -1,0 +1,36 @@
+@font-face 
+{
+    font-family: Coves-Bold;
+    src: url('../fonts/Coves-Bold.otf');
+}
+@font-face 
+{
+    font-family: Coves-Light;
+    src: url('../fonts/Coves-Light.otf');
+}
+.sidebar_list
+{
+    font-family: Coves-Bold;
+    font-weight: 600;
+    font-size: 20px;
+}
+.sidebar_list .sidebar_item
+{
+	border: none;
+	background-color: #F5F8FD;
+}
+.sidebar_icon 
+{
+	font-weight: 400;
+	font-size: 15px;
+}
+
+/**
+ * css cho phần transition project_list
+ */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

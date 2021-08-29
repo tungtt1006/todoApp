@@ -1,0 +1,31 @@
+.line_thourgh
+{
+	text-decoration: line-through;
+}
+@font-face 
+{
+    font-family: Coves-Bold;
+    src: url('../fonts/Coves-Bold.otf');
+}
+@font-face 
+{
+    font-family: Coves-Light;
+    src: url('../fonts/Coves-Light.otf');
+}
+@font-face 
+{
+    font-family: Azonix;
+    src: url('../fonts/Azonix.otf');
+}
+.my_icon
+{
+    
+} 
+.ed_label
+{
+	font-weight: 500;
+}
+.btn_update_delete
+{
+    font-size: 20px;
+}
