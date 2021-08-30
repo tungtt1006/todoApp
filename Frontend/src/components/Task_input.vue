@@ -60,7 +60,7 @@ export default {
     mounted () {
         if(this.projectAcitve != 1) {
             axios
-              .get('http://localhost/TodoApp/api/projects/getallproject.php')
+              .get('http://localhost/TodoApp/backend/api/projects/getallproject.php')
               .then(response => {this.projects = response.data});
         }
     },
@@ -68,14 +68,14 @@ export default {
         addTask: function () {
             if(this.projectAcitve == 1) {
                 axios
-                  .post('http://localhost/TodoApp/api/projects/createproject.php', {
+                  .post('http://localhost/TodoApp/backend/api/projects/createproject.php', {
                     name: this.project_name, 
                   })
                   .then(response => {this.test = response.data});          
             }
             
             axios
-                .post('http://localhost/TodoApp/api/tasklist/create.php', {
+                .post('http://localhost/TodoApp/backend/api/tasklist/create.php', {
                     name: this.name, 
                     priority: this.priority,
                     finish_time: this.finish_time,

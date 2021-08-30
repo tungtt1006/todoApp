@@ -33,7 +33,7 @@ export default {
     mounted() {
         if(this.menu_item_data.index == 4) {
             axios
-               .get('http://localhost/TodoApp/api/projects/getallproject.php')
+               .get('http://localhost/TodoApp/backend/api/projects/getallproject.php')
                .then(response => {this.projects = response.data});
         }
     },
@@ -47,7 +47,7 @@ export default {
         },
         reloadPage: function () {
             axios
-               .get('http://localhost/TodoApp/api/projects/getallproject.php')
+               .get('http://localhost/TodoApp/backend/api/projects/getallproject.php')
                .then(response => {this.projects = response.data});
         }
     },

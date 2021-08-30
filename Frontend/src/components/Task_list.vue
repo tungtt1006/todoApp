@@ -31,7 +31,7 @@ export default {
     },
     mounted() {
         axios
-          .get('http://localhost/TodoApp/api/tasklist/gettasks.php')
+          .get('http://localhost/TodoApp/backend/api/tasklist/gettasks.php')
           .then(response => {this.tasks = response.data});
     },
     components: {
@@ -41,7 +41,7 @@ export default {
     methods: {
         rerender: function () {
             axios
-                .get('http://localhost/TodoApp/api/tasklist/read.php')
+                .get('http://localhost/TodoApp/backend/api/tasklist/read.php')
                 .then(response => {this.tasks = response.data});
         },
         moveToupdate1: function (taskUpdate) {

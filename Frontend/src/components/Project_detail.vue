@@ -52,14 +52,14 @@ export default {
     methods: {
         loadData: function () {
             axios
-              .get('http://localhost/TodoApp/api/projects/getprojectname.php?project_id='+this.project_detail_id)
+              .get('http://localhost/TodoApp/backend/api/projects/getprojectname.php?project_id='+this.project_detail_id)
               .then(response => {this.project = response.data});
             this.$forceUpdate();
 
         },
         loadData1: function () {
             axios
-              .get('http://localhost/TodoApp/api/tasklist/readwprojectid.php?project_id='+this.project_detail_id)
+              .get('http://localhost/TodoApp/backend/api/tasklist/readwprojectid.php?project_id='+this.project_detail_id)
               .then(response => {this.tasks = response.data});
             this.$forceUpdate();
         },
@@ -71,7 +71,7 @@ export default {
         },
         updateProject: function () {
             axios
-              .put('http://localhost/TodoApp/api/projects/updateproject.php?id='+this.project.id, {
+              .put('http://localhost/TodoApp/backend/api/projects/updateproject.php?id='+this.project.id, {
                   name: this.project.name
             });
             alert("Updated successfully");
@@ -79,7 +79,7 @@ export default {
         },
         deleteProject: function () {
             axios
-              .delete('http://localhost/TodoApp/api/projects/deleteproject.php?id='+this.project_detail_id);
+              .delete('http://localhost/TodoApp/backend/api/projects/deleteproject.php?id='+this.project_detail_id);
             this.$emit('reload_menu');
         }
     },

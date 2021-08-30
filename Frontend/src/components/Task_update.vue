@@ -52,16 +52,16 @@ export default {
     },
     mounted () {
         axios
-          .get('http://localhost/TodoApp/api/projects/getallproject.php')
+          .get('http://localhost/TodoApp/backend/api/projects/getallproject.php')
           .then(response => {this.projects = response.data});
         axios
-          .get('http://localhost/TodoApp/api/tasklist/getatask.php?id='+this.task_update_id)
+          .get('http://localhost/TodoApp/backend/api/tasklist/getatask.php?id='+this.task_update_id)
           .then(response => {this.task = response.data});
     },
     methods: {
         updateTask: function () {
             axios
-              .put('http://localhost/TodoApp/api/tasklist/updatetask.php?id='+this.task.id, {
+              .put('http://localhost/TodoApp/backend/api/tasklist/updatetask.php?id='+this.task.id, {
                 name: this.task.name,
                 priority: this.task.priority,
                 project_id: this.task.project_id,

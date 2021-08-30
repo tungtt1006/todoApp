@@ -49,7 +49,7 @@ export default {
     watch: {
         checked: function () {
             axios
-              .get('http://localhost/TodoApp/api/tasklist/updatestatus.php?id='+(this.taskData.id));
+              .get('http://localhost/TodoApp/backend/api/tasklist/updatestatus.php?id='+(this.taskData.id));
             this.$emit('render_again');
         }
     },
@@ -60,7 +60,7 @@ export default {
         },
         deleteTask: function () {
             axios
-              .delete('http://localhost/TodoApp/api/tasklist/deletetask.php?id='+this.taskData.id);
+              .delete('http://localhost/TodoApp/backend/api/tasklist/deletetask.php?id='+this.taskData.id);
             this.$emit('render_again');
         }
     }
